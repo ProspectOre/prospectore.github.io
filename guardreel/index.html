@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardReel Legal</title>
+    <style>
+        :root {
+            --bg: #000;
+            --text: #fff;
+            --text-secondary: #888;
+            --accent: #E31937;
+            --card-bg: #111;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+        .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            text-decoration: none;
+            display: block;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            background: #1a1a1a;
+        }
+        .card h2 {
+            color: var(--text);
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Guard<span>Reel</span></div>
+        <p class="subtitle">Legal Documents</p>
+
+        <a href="privacy-policy" class="card">
+            <h2>Privacy Policy</h2>
+            <p>Learn how GuardReel handles your data, including video processing, analytics, and advertising.</p>
+        </a>
+
+        <a href="terms-of-service" class="card">
+            <h2>Terms of Service</h2>
+            <p>Read the terms and conditions for using the GuardReel app.</p>
+        </a>
+
+        <div class="footer">
+            <p>Last updated: January 27, 2026</p>
+            <p style="margin-top: 8px;">
+                <a href="mailto:legal@guardreel.app">legal@guardreel.app</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
