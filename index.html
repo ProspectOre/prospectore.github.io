@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>ProspectOre</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Prospectore LLC</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #1d1d1f; background-color: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        header { border-bottom: 1px solid #e5e5e7; padding: 20px 0; }
+        .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+        .logo-text { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav a { font-size: 14px; color: #6e6e73; text-decoration: none; }
+        nav a:hover { color: #1d1d1f; }
+        .hero { padding: 80px 0 40px; text-align: center; }
+        .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 16px; }
+        .hero p { font-size: 18px; color: #6e6e73; max-width: 480px; margin: 0 auto; }
+        .support-section { padding: 40px 0 80px; }
+        .card { background: #f5f5f7; border-radius: 16px; padding: 40px; text-align: center; margin-bottom: 24px; }
+        .card-icon { width: 48px; height: 48px; background: #1d1d1f; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .card-icon svg { width: 24px; height: 24px; fill: #fff; }
+        .card h2 { font-size: 22px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.02em; }
+        .card p { font-size: 15px; color: #6e6e73; margin-bottom: 20px; }
+        .card a.email-link { display: inline-block; font-size: 16px; font-weight: 500; color: #0066cc; text-decoration: none; }
+        .card a.email-link:hover { text-decoration: underline; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .info-card { background: #f5f5f7; border-radius: 16px; padding: 28px; }
+        .info-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+        .info-card p { font-size: 14px; color: #6e6e73; }
+        footer { border-top: 1px solid #e5e5e7; padding: 24px 0; text-align: center; }
+        footer p { font-size: 13px; color: #86868b; }
+        @media (max-width: 600px) { .hero h1 { font-size: 30px; } .hero p { font-size: 16px; } .card { padding: 28px 20px; } .info-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-    <h1>ProspectOre</h1>
-    <p>App developer.</p>
+    <header><div class="container"><nav><span class="logo-text">Prospectore LLC</span><a href="#support">Support</a></nav></div></header>
+    <main class="container">
+        <section class="hero"><h1>How can we help?</h1><p>We\'re here to help with any questions or issues you have with our apps.</p></section>
+        <section id="support" class="support-section">
+            <div class="card">
+                <div class="card-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+                <h2>Email Support</h2>
+                <p>Send us a message and we\'ll get back to you as soon as possible.</p>
+                <a href="mailto:admin@prospectorellc.com" class="email-link">admin@prospectorellc.com</a>
+            </div>
+            <div class="info-grid">
+                <div class="info-card"><h3>Bug Reports</h3><p>Found something that isn\'t working right? Let us know and we\'ll look into it.</p></div>
+                <div class="info-card"><h3>Feature Requests</h3><p>Have an idea for how we can improve? We\'d love to hear your suggestions.</p></div>
+            </div>
+        </section>
+    </main>
+    <footer><div class="container"><p>&copy; 2026 Prospectore LLC. All rights reserved.</p></div></footer>
 </body>
 </html>
