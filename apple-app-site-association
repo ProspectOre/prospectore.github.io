@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": ["8PPPG9S35V.com.prospectore.operatorinsights"],
+                "components": [
+                    {
+                        "/": "/operator-insights-auth/*",
+                        "comment": "Square OAuth callback"
+                    }
+                ]
+            }
+        ]
+    }
+}
