@@ -11,5 +11,8 @@
                 ]
             }
         ]
+    },
+    "webcredentials": {
+        "apps": ["8PPPG9S35V.com.prospectore.operatorinsights"]
     }
 }
