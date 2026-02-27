@@ -105,7 +105,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="absolute inset-x-0 bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 flex justify-between px-2 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:px-4">
+      <div className="absolute inset-x-0 bottom-1 z-20 flex justify-between px-2 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:px-4">
         <button
           type="button"
           onClick={() => go(-1)}

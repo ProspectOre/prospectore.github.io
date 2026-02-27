@@ -237,6 +237,9 @@
   .-bottom-1 {
     bottom: calc(var(--spacing) * -1);
   }
+  .bottom-1 {
+    bottom: calc(var(--spacing) * 1);
+  }
   .bottom-\[-14\%\] {
     bottom: -14%;
   }
@@ -978,19 +981,9 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-  .xl\:items-start {
-    @media (width >= 80rem) {
-      align-items: flex-start;
-    }
-  }
   .xl\:p-10 {
     @media (width >= 80rem) {
       padding: calc(var(--spacing) * 10);
-    }
-  }
-  .xl\:text-left {
-    @media (width >= 80rem) {
-      text-align: left;
     }
   }
 }
