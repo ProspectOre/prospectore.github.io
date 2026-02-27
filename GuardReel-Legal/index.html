@@ -92,21 +92,6 @@
         .card a:hover {
             text-decoration: underline;
         }
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-            padding: 1.25rem 0;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        .faq-question {
-            color: #fff;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .faq-answer {
-            color: var(--text-secondary);
-        }
         .links {
             display: flex;
             gap: 2rem;
@@ -165,59 +150,13 @@
         </section>
 
         <section class="section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="card">
-                <div class="faq-item">
-                    <div class="faq-question">How do I import my Tesla dashcam clips?</div>
-                    <div class="faq-answer">Connect your Tesla USB drive to your iPhone/iPad using a USB-C adapter or Lightning to USB adapter. Then tap "Import" in the app and select "Intelligent Scan" to automatically find all your clips.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Why are some cameras missing in my clips?</div>
-                    <div class="faq-answer">This usually means those camera angles weren't recording at the time. Older Tesla vehicles (HW3) have 4 cameras, while newer vehicles (HW4) have 6 cameras including pillar cameras.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Why is the telemetry data missing?</div>
-                    <div class="faq-answer">As of the December 2025 release, telemetry (speed, GPS, etc.) is supported for Sentry, Dashcam, Saved Clips, and Recents when source metadata is present. If telemetry is missing, re-import the original files with Intelligent Scan.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do I export in higher quality?</div>
-                    <div class="faq-answer">Tap the Export button and select your desired quality level. Higher resolutions like 4K require more processing time and storage space.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What is GuardReel Pro?</div>
-                    <div class="faq-answer">GuardReel Pro is an optional yearly subscription ($2.99/year) that removes all advertisements, unlocks all export qualities, and lets you customize the watermark. All core features are available in the free version — Pro provides an ad-free experience with full-resolution exports and custom watermarks.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do I cancel my Pro subscription?</div>
-                    <div class="faq-answer">Open the Settings app on your iPhone or iPad, tap your name at the top, then tap Subscriptions. Find GuardReel Pro and tap Cancel Subscription. Your Pro benefits continue until the end of the current billing period.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do I restore my Pro purchase on a new device?</div>
-                    <div class="faq-answer">In the app, go to Settings and tap "Restore Purchases." Make sure you're signed in with the same Apple ID you used to subscribe.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Can I remove the watermark?</div>
-                    <div class="faq-answer">The watermark is included in all exported videos. GuardReel Pro subscribers can customize the watermark text.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Is my video data uploaded anywhere?</div>
-                    <div class="faq-answer">No. All video processing happens entirely on your device. Your videos never leave your phone or tablet unless you choose to share them yourself.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do I change the camera in a layout slot?</div>
-                    <div class="faq-answer">Tap and hold on any camera view in the preview to open the camera selection menu. You can assign any available camera to any slot.</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
             <h2>Your Data &amp; Privacy Rights</h2>
             <div class="card">
                 <h3>🔒 What Data Does GuardReel Have About Me?</h3>
                 <p>GuardReel does not maintain user accounts and does not store personally identifiable information on our servers. Here's exactly what exists:</p>
                 <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1rem;">
                     <li><strong style="color: var(--text);">Your videos:</strong> 100% on your device. We never upload, access, or store them.</li>
-                    <li><strong style="color: var(--text);">Analytics:</strong> Anonymized usage patterns (screens viewed, features used) via Firebase. Cannot be linked to you personally.</li>
+                    <li><strong style="color: var(--text);">Analytics:</strong> Usage and diagnostics signals (for example screens viewed and crash context) are collected via Firebase in aggregated or pseudonymous form and are not intended to directly identify you.</li>
                     <li><strong style="color: var(--text);">Crash reports:</strong> Device model + stack traces via Crashlytics. No personal identifiers. Auto-deleted after 90 days.</li>
                     <li><strong style="color: var(--text);">Advertising:</strong> If you allowed tracking, Google AdMob may have data tied to your device's IDFA. This is controlled by Apple, not us.</li>
                     <li><strong style="color: var(--text);">Purchases:</strong> Handled entirely by Apple. We only see whether you have an active subscription — no payment details.</li>
@@ -238,14 +177,14 @@
                 <p>You can control what data is collected at any time:</p>
                 <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1rem;">
                     <li><strong style="color: var(--text);">Stop ad tracking:</strong> iOS Settings → Privacy &amp; Security → Tracking → disable for GuardReel</li>
-                    <li><strong style="color: var(--text);">Remove all ads:</strong> Subscribe to GuardReel Pro ($2.99/yr) — no advertising data is collected for Pro users</li>
+                    <li><strong style="color: var(--text);">Remove all ads:</strong> Subscribe to GuardReel Pro ($2.99/yr) — Pro removes in-app ads and disables ad-request traffic while Pro is active</li>
                     <li><strong style="color: var(--text);">Manage GDPR consent:</strong> In-app Settings → Ad Privacy Settings (available to EU users)</li>
                     <li><strong style="color: var(--text);">Google ad preferences:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a></li>
                 </ul>
             </div>
             <div class="card">
                 <h3>📬 Submit a Privacy Request</h3>
-                <p>If you'd like to exercise your data rights under GDPR, CCPA, UK GDPR, LGPD, PIPEDA, or any other applicable privacy law, email us. Include "Privacy Request" in the subject line and tell us what you need (access, deletion, correction, portability, or opt-out). We respond within 30 days.</p>
+                <p>If you'd like to exercise your data rights under GDPR, CCPA, UK GDPR, LGPD, PIPEDA, or any other applicable privacy law, email us. Include "Privacy Request" in the subject line and tell us what you need (access, deletion, correction, portability, or opt-out). We respond within applicable legal timelines (typically 30 days under GDPR/UK GDPR and up to 45 days for CCPA/CPRA).</p>
                 <a href="/cdn-cgi/l/email-protection#3354465241574156565f7343415c40435650475c41565f5f501d505c5e0c404651595650470e63415a4552504a16010361564246564047" class="email-link">
                     Submit Privacy Request
                 </a>
