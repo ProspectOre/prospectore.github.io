@@ -145,7 +145,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
               rel="noreferrer"
               className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
-              <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="currentColor" aria-hidden="true">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="currentColor" aria-hidden="true">
                 <path d="M16.77 12.53c.02 2.31 2.03 3.08 2.05 3.09-.02.05-.32 1.12-1.06 2.21-.64.94-1.31 1.88-2.35 1.9-1.03.02-1.36-.61-2.53-.61-1.16 0-1.53.59-2.5.63-1 .04-1.76-1-2.41-1.93-1.32-1.92-2.33-5.43-.98-7.79.67-1.17 1.87-1.91 3.17-1.93.99-.02 1.92.67 2.53.67.61 0 1.75-.83 2.95-.71.5.02 1.9.2 2.8 1.52-.07.05-1.67.98-1.66 2.95zM14.96 7.49c.54-.65.9-1.56.8-2.46-.78.03-1.73.52-2.28 1.17-.5.58-.93 1.5-.81 2.38.87.07 1.76-.44 2.29-1.09z" />
               </svg>
               <span>Download on App Store</span>
@@ -174,18 +174,18 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
             {selected.screenshots.map((src, idx) => {
               const offset = idx - 1;
               return (
-                <motion.img
-                  key={src}
-                  src={src}
-                  alt={`${selected.name} screenshot ${idx + 1}`}
-                  loading="lazy"
-                  decoding="async"
-                  initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, x: offset * 70, y: 24, rotateY: offset * -14, scale: 0.92 }}
-                  animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: offset * 96, y: Math.abs(offset) * 16, rotateY: offset * -10, scale: 1 }}
-                  transition={prefersReducedMotion ? { duration: 0.2 } : { duration: 0.6, delay: 0.12 + idx * 0.12, ease: 'easeOut' }}
-                  className="absolute h-[88%] max-h-[680px] w-auto rounded-[1.4rem] border border-white/20 object-cover shadow-2xl [aspect-ratio:9/19.5]"
-                  style={{ zIndex: 10 - Math.abs(offset) }}
-                />
+                <div key={src} className="absolute inset-0 flex items-center justify-center" style={{ zIndex: offset === 0 ? 12 : 11 }}>
+                  <motion.img
+                    src={src}
+                    alt={`${selected.name} screenshot ${idx + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, x: offset * 52, y: 20, rotateY: offset * -14, scale: 0.94 }}
+                    animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: offset * 82, y: Math.abs(offset) * 14, rotateY: offset * -10, scale: 1 }}
+                    transition={prefersReducedMotion ? { duration: 0.2 } : { duration: 0.6, delay: 0.12 + idx * 0.12, ease: 'easeOut' }}
+                    className="h-[88%] max-h-[680px] w-auto rounded-[1.4rem] border border-white/20 object-cover shadow-2xl [aspect-ratio:9/19.5]"
+                  />
+                </div>
               );
             })}
           </div>
