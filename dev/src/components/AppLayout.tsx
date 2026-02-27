@@ -6,7 +6,7 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
     return (
-        <div className="relative h-[100dvh] w-screen overflow-hidden bg-black text-white selection:bg-white/20">
+        <div className="relative h-[100dvh] w-screen overflow-x-hidden overflow-y-auto bg-black pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] text-white selection:bg-white/20 md:overflow-hidden">
             {/* Noise Texture Overlay for Premium HIG Feel */}
             <div
                 className="pointer-events-none absolute inset-0 z-50 opacity-[0.12] mix-blend-overlay"

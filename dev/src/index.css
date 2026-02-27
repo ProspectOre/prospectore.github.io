@@ -2,7 +2,8 @@
 
 body {
     user-select: none;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: black;
     color: white;
     -webkit-font-smoothing: antialiased;

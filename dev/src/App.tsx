@@ -16,12 +16,12 @@ function App() {
     <AppLayout>
       <IntelligentBackdrop focusState={focusState} />
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-6 py-8 md:px-12 pointer-events-none">
+      <div className="pointer-events-none relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-4 py-5 md:px-12 md:py-8">
         <div className="pointer-events-auto">
           <HeroHeader onContactClick={() => setIsContactOpen(true)} />
         </div>
 
-        <main className="pointer-events-auto flex-1 overflow-hidden">
+        <main className="pointer-events-auto flex flex-1 items-center justify-center overflow-visible md:overflow-hidden">
           <AppStage focusState={focusState} onFocusChange={setFocusState} />
         </main>
 
