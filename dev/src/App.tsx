@@ -9,7 +9,7 @@ import ContactOverlay from './components/ContactOverlay.tsx';
 export type AppFocusState = 'idle' | 'mycut' | 'guardreel';
 
 function App() {
-  const [focusState, setFocusState] = useState<AppFocusState>('idle');
+  const [focusState, setFocusState] = useState<AppFocusState>('guardreel');
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
