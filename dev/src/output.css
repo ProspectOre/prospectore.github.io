@@ -312,9 +312,6 @@
   .\[aspect-ratio\:9\/19\.5\] {
     aspect-ratio: 9/19.5;
   }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -357,9 +354,6 @@
   .min-h-0 {
     min-height: calc(var(--spacing) * 0);
   }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
@@ -396,6 +390,9 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
+  .max-w-\[23rem\] {
+    max-width: 23rem;
+  }
   .max-w-lg {
     max-width: var(--container-lg);
   }
@@ -410,6 +407,10 @@
   }
   .origin-left {
     transform-origin: 0;
+  }
+  .-translate-x-4 {
+    --tw-translate-x: calc(var(--spacing) * -4);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .scale-x-0 {
     --tw-scale-x: 0%;
@@ -432,6 +433,9 @@
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -973,6 +977,11 @@
       letter-spacing: 0.22em;
     }
   }
+  .xl\:mx-auto {
+    @media (width >= 80rem) {
+      margin-inline: auto;
+    }
+  }
   .xl\:flex {
     @media (width >= 80rem) {
       display: flex;
@@ -983,9 +992,19 @@
       display: none;
     }
   }
+  .xl\:max-w-\[30rem\] {
+    @media (width >= 80rem) {
+      max-width: 30rem;
+    }
+  }
   .xl\:grid-cols-\[0\.95fr_1\.05fr\] {
     @media (width >= 80rem) {
       grid-template-columns: 0.95fr 1.05fr;
+    }
+  }
+  .xl\:grid-cols-\[1fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 1fr 1fr;
     }
   }
   .xl\:items-start {
@@ -1020,6 +1039,21 @@ body {
 }
 .text-balance {
   text-wrap: balance;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-scale-x {
   syntax: "*";
@@ -1240,24 +1274,12 @@ body {
   syntax: "*";
   inherits: false;
 }
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
@@ -1309,9 +1331,6 @@ body {
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
     }
   }
 }

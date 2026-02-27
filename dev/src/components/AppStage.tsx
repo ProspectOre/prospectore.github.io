@@ -131,9 +131,9 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
           animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: 0, scale: 1 }}
           exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, x: -42, scale: 0.985 }}
           transition={prefersReducedMotion ? { duration: 0.2 } : cardSpring}
-          className="relative mx-auto grid h-auto min-h-0 w-full max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-[1.6rem] border border-white/12 bg-white/[0.04] p-5 backdrop-blur-xl md:h-[74vh] md:min-h-[520px] md:gap-8 md:rounded-[2rem] md:p-6 xl:grid-cols-[0.95fr_1.05fr] xl:p-10"
+          className="relative mx-auto grid h-auto min-h-0 w-full max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-[1.6rem] border border-white/12 bg-white/[0.04] p-5 backdrop-blur-xl md:h-[74vh] md:min-h-[520px] md:gap-8 md:rounded-[2rem] md:p-6 xl:grid-cols-[1fr_1fr] xl:p-10"
         >
-          <div className="flex min-w-0 flex-col items-center justify-center text-center xl:items-start xl:text-left">
+          <div className="flex min-w-0 flex-col items-center justify-center text-center xl:mx-auto xl:max-w-[30rem] xl:items-start xl:text-left">
             <img src={selected.iconUrl} alt={`${selected.name} icon`} className="mb-5 h-16 w-16 rounded-3xl border border-white/20 object-cover md:mb-6 md:h-20 md:w-20" />
             <p className={`mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] md:text-xs md:tracking-[0.22em] ${selected.accent}`}>{selected.category}</p>
             <h3 className="mb-3 text-3xl font-semibold tracking-tight md:mb-4 md:text-5xl">{selected.name}</h3>
@@ -153,7 +153,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
           </div>
 
           <div className="w-full xl:hidden">
-            <div className="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-1">
+            <div className="mx-auto grid w-full max-w-[23rem] grid-cols-3 gap-2">
               {selected.screenshots.map((src, idx) => (
                 <motion.img
                   key={`${selected.id}-mobile-${src}`}
@@ -164,13 +164,13 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
                   initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 12, scale: 0.98 }}
                   animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
                   transition={prefersReducedMotion ? { duration: 0.2 } : { duration: 0.38, delay: idx * 0.06, ease: 'easeOut' }}
-                  className="h-52 w-auto shrink-0 snap-center rounded-[1.1rem] border border-white/20 object-cover shadow-xl [aspect-ratio:9/19.5]"
+                  className="w-full rounded-[1.1rem] border border-white/20 object-cover shadow-xl [aspect-ratio:9/19.5]"
                 />
               ))}
             </div>
           </div>
 
-          <div className="relative hidden h-full min-w-0 items-center justify-center xl:flex">
+          <div className="relative hidden h-full min-w-0 -translate-x-4 items-center justify-center xl:flex">
             {selected.screenshots.map((src, idx) => {
               const offset = idx - 1;
               return (
@@ -181,7 +181,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
                     loading="lazy"
                     decoding="async"
                     initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, x: offset * 52, y: 20, rotateY: offset * -14, scale: 0.94 }}
-                    animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: offset * 82, y: Math.abs(offset) * 14, rotateY: offset * -10, scale: 1 }}
+                    animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: offset * 72, y: Math.abs(offset) * 14, rotateY: offset * -10, scale: 1 }}
                     transition={prefersReducedMotion ? { duration: 0.2 } : { duration: 0.6, delay: 0.12 + idx * 0.12, ease: 'easeOut' }}
                     className="h-[88%] max-h-[680px] w-auto rounded-[1.4rem] border border-white/20 object-cover shadow-2xl [aspect-ratio:9/19.5]"
                   />
