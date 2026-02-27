@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+    user-select: none;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Glass panel moved to tailwind utilities inside component classNames for V4 compatibility */
