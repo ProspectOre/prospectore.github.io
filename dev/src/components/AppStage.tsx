@@ -101,15 +101,15 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
 
   return (
     <section
-      className="relative flex h-full w-full items-center justify-center overflow-visible py-4 md:overflow-hidden md:py-0"
+      className="relative flex h-full w-full flex-col items-center justify-center overflow-visible py-4 md:flex-row md:overflow-hidden md:py-0"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="absolute inset-x-0 bottom-1 z-20 flex justify-between px-2 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:px-4">
+      <div className="absolute inset-x-0 top-1/2 z-20 hidden -translate-y-1/2 justify-between px-4 md:flex">
         <button
           type="button"
           onClick={() => go(-1)}
-          className="h-11 w-11 rounded-full border border-white/15 bg-black/45 text-white/70 backdrop-blur-md transition hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 md:h-10 md:w-10"
+          className="h-10 w-10 rounded-full border border-white/15 bg-black/45 text-white/70 backdrop-blur-md transition hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           aria-label="Previous app"
         >
           <span className="text-xl">‹</span>
@@ -117,7 +117,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
         <button
           type="button"
           onClick={() => go(1)}
-          className="h-11 w-11 rounded-full border border-white/15 bg-black/45 text-white/70 backdrop-blur-md transition hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 md:h-10 md:w-10"
+          className="h-10 w-10 rounded-full border border-white/15 bg-black/45 text-white/70 backdrop-blur-md transition hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           aria-label="Next app"
         >
           <span className="text-xl">›</span>
@@ -191,6 +191,25 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
           </div>
         </motion.article>
       </AnimatePresence>
+
+      <div className="mt-6 flex w-full max-w-6xl justify-between px-2 md:hidden">
+        <button
+          type="button"
+          onClick={() => go(-1)}
+          className="h-11 w-11 rounded-full border border-white/15 bg-black/45 text-white/70 backdrop-blur-md transition hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+          aria-label="Previous app"
+        >
+          <span className="text-xl">‹</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => go(1)}
+          className="h-11 w-11 rounded-full border border-white/15 bg-black/45 text-white/70 backdrop-blur-md transition hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+          aria-label="Next app"
+        >
+          <span className="text-xl">›</span>
+        </button>
+      </div>
     </section>
   );
 }
