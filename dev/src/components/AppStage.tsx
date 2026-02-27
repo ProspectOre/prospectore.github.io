@@ -133,17 +133,17 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
           transition={prefersReducedMotion ? { duration: 0.2 } : cardSpring}
           className="relative mx-auto grid h-auto min-h-0 w-full max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-[1.6rem] border border-white/12 bg-white/[0.04] p-5 backdrop-blur-xl md:h-[74vh] md:min-h-[520px] md:gap-8 md:rounded-[2rem] md:p-6 xl:grid-cols-[1fr_1fr] xl:p-10"
         >
-          <div className="flex min-w-0 flex-col items-center justify-center text-center xl:mx-auto xl:max-w-[30rem] xl:items-start xl:text-left">
+          <div className="flex min-w-0 w-full flex-col items-center justify-center text-center xl:mx-auto xl:max-w-[30rem]">
             <img src={selected.iconUrl} alt={`${selected.name} icon`} className="mb-5 h-16 w-16 rounded-3xl border border-white/20 object-cover md:mb-6 md:h-20 md:w-20" />
             <p className={`mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] md:text-xs md:tracking-[0.22em] ${selected.accent}`}>{selected.category}</p>
             <h3 className="mb-3 text-3xl font-semibold tracking-tight md:mb-4 md:text-5xl">{selected.name}</h3>
-            <p className="mb-6 max-w-lg text-sm leading-relaxed text-white/72 md:mb-8 md:text-lg">{selected.desc}</p>
+            <p className="mx-auto mb-6 max-w-lg text-sm leading-relaxed text-white/72 md:mb-8 md:text-lg">{selected.desc}</p>
 
             <a
               href={selected.link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="mx-auto inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="currentColor" aria-hidden="true">
                 <path d="M16.77 12.53c.02 2.31 2.03 3.08 2.05 3.09-.02.05-.32 1.12-1.06 2.21-.64.94-1.31 1.88-2.35 1.9-1.03.02-1.36-.61-2.53-.61-1.16 0-1.53.59-2.5.63-1 .04-1.76-1-2.41-1.93-1.32-1.92-2.33-5.43-.98-7.79.67-1.17 1.87-1.91 3.17-1.93.99-.02 1.92.67 2.53.67.61 0 1.75-.83 2.95-.71.5.02 1.9.2 2.8 1.52-.07.05-1.67.98-1.66 2.95zM14.96 7.49c.54-.65.9-1.56.8-2.46-.78.03-1.73.52-2.28 1.17-.5.58-.93 1.5-.81 2.38.87.07 1.76-.44 2.29-1.09z" />

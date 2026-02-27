@@ -264,9 +264,6 @@
   .z-\[100\] {
     z-index: 100;
   }
-  .-mx-1 {
-    margin-inline: calc(var(--spacing) * -1);
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -323,9 +320,6 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
-  }
-  .h-52 {
-    height: calc(var(--spacing) * 52);
   }
   .h-\[2px\] {
     height: 2px;
@@ -422,15 +416,6 @@
   .resize {
     resize: both;
   }
-  .snap-x {
-    scroll-snap-type: x var(--tw-scroll-snap-strictness);
-  }
-  .snap-mandatory {
-    --tw-scroll-snap-strictness: mandatory;
-  }
-  .snap-center {
-    scroll-snap-align: center;
-  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -463,9 +448,6 @@
   }
   .overflow-visible {
     overflow: visible;
-  }
-  .overflow-x-auto {
-    overflow-x: auto;
   }
   .overflow-x-hidden {
     overflow-x: hidden;
@@ -562,9 +544,6 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .px-1 {
-    padding-inline: calc(var(--spacing) * 1);
-  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -582,9 +561,6 @@
   }
   .pt-\[env\(safe-area-inset-top\)\] {
     padding-top: env(safe-area-inset-top);
-  }
-  .pb-1 {
-    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-\[env\(safe-area-inset-bottom\)\] {
     padding-bottom: env(safe-area-inset-bottom);
@@ -997,11 +973,6 @@
       max-width: 30rem;
     }
   }
-  .xl\:grid-cols-\[0\.95fr_1\.05fr\] {
-    @media (width >= 80rem) {
-      grid-template-columns: 0.95fr 1.05fr;
-    }
-  }
   .xl\:grid-cols-\[1fr_1fr\] {
     @media (width >= 80rem) {
       grid-template-columns: 1fr 1fr;
@@ -1089,11 +1060,6 @@ body {
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
-}
-@property --tw-scroll-snap-strictness {
-  syntax: "*";
-  inherits: false;
-  initial-value: proximity;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -1288,7 +1254,6 @@ body {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-scroll-snap-strictness: proximity;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
