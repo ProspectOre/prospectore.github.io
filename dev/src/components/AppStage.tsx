@@ -131,9 +131,9 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
           animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, x: 0, scale: 1 }}
           exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, x: -42, scale: 0.985 }}
           transition={prefersReducedMotion ? { duration: 0.2 } : cardSpring}
-          className="relative mx-auto grid h-auto min-h-0 w-full max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-[1.6rem] border border-white/12 bg-white/[0.04] p-5 backdrop-blur-xl md:h-[74vh] md:min-h-[520px] md:gap-8 md:rounded-[2rem] md:p-6 lg:grid-cols-[0.95fr_1.05fr] lg:p-10"
+          className="relative mx-auto grid h-auto min-h-0 w-full max-w-6xl grid-cols-1 gap-6 overflow-hidden rounded-[1.6rem] border border-white/12 bg-white/[0.04] p-5 backdrop-blur-xl md:h-[74vh] md:min-h-[520px] md:gap-8 md:rounded-[2rem] md:p-6 2xl:grid-cols-[0.95fr_1.05fr] 2xl:p-10"
         >
-          <div className="flex min-w-0 flex-col items-center justify-center text-center md:items-start md:text-left">
+          <div className="flex min-w-0 flex-col items-center justify-center text-center 2xl:items-start 2xl:text-left">
             <img src={selected.iconUrl} alt={`${selected.name} icon`} className="mb-5 h-16 w-16 rounded-3xl border border-white/20 object-cover md:mb-6 md:h-20 md:w-20" />
             <p className={`mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] md:text-xs md:tracking-[0.22em] ${selected.accent}`}>{selected.category}</p>
             <h3 className="mb-3 text-3xl font-semibold tracking-tight md:mb-4 md:text-5xl">{selected.name}</h3>
@@ -152,7 +152,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
             </a>
           </div>
 
-          <div className="w-full lg:hidden">
+          <div className="w-full 2xl:hidden">
             <div className="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-1">
               {selected.screenshots.map((src, idx) => (
                 <motion.img
@@ -170,7 +170,7 @@ export default function AppStage({ focusState, onFocusChange }: AppStageProps) {
             </div>
           </div>
 
-          <div className="relative hidden h-full min-w-0 items-center justify-center lg:flex">
+          <div className="relative hidden h-full min-w-0 items-center justify-center 2xl:flex">
             {selected.screenshots.map((src, idx) => (
               <motion.img
                 key={src}

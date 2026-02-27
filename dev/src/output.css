@@ -991,6 +991,36 @@
       padding: calc(var(--spacing) * 10);
     }
   }
+  .\32 xl\:flex {
+    @media (width >= 96rem) {
+      display: flex;
+    }
+  }
+  .\32 xl\:hidden {
+    @media (width >= 96rem) {
+      display: none;
+    }
+  }
+  .\32 xl\:grid-cols-\[0\.95fr_1\.05fr\] {
+    @media (width >= 96rem) {
+      grid-template-columns: 0.95fr 1.05fr;
+    }
+  }
+  .\32 xl\:items-start {
+    @media (width >= 96rem) {
+      align-items: flex-start;
+    }
+  }
+  .\32 xl\:p-10 {
+    @media (width >= 96rem) {
+      padding: calc(var(--spacing) * 10);
+    }
+  }
+  .\32 xl\:text-left {
+    @media (width >= 96rem) {
+      text-align: left;
+    }
+  }
 }
 body {
   margin: 0;
